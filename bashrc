@@ -23,9 +23,8 @@ for i in ~/dotfiles/completion/*; do
     . $i
 done
 
-export PS1="\[\033[31m\]\u\[\033[m\]:\[\033[35;1m\]\w\[\033[m\]\$ "
-export LS_OPTIONS="--color=always --group-directories-first"
+# set prompt style and include git branch name
+export PS1="\[\033[31m\]\u\[\033[m\]:\[\033[35;1m\]\w\[\033[m\]\\[\033[32m\]\$(parse_git_branch)\[\033[m\]\$ "
 
+# ls colors
 eval `gdircolors -b ~/dotfiles/bash/dir_colors`
-
-# TERM=xterm-256color

@@ -1,3 +1,4 @@
+#!/bin/bash
 # cd to the path of the front Finder window
 cdf() {
         target=`osascript -e 'tell application "Finder" to if (count of Finder
@@ -22,7 +23,7 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
     man "$@"
 }
-# simple web server
-serve() { 
-    python -m SimpleHTTPServer ${1:-8080}}
+# git branch in prompt
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
