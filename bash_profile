@@ -1,2 +1,2 @@
-# source bashrc
-. ~/.bashrc
+# source from bashrc in dotfiles
+. ~/dotfiles/bashrc

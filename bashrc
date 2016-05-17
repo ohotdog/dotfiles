@@ -28,4 +28,4 @@ export LS_OPTIONS="--color=always --group-directories-first"
 
 eval `gdircolors -b ~/dotfiles/bash/dir_colors`
 
-TERM=xterm-256color
+# TERM=xterm-256color

@@ -2,3 +2,8 @@
 	ui = true
 [core]
 	excludesfile = ~/dotfiles/gitignore_global
+[credential]
+        helper = osxkeychain
+[user]
+        name = Alec Campbell 
+        email = thisiswaysilly@gmail.com
