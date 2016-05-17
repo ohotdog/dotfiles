@@ -1,0 +1,11 @@
+# Useful aliases
+alias ls="gls $LS_OPTIONS -hF"
+alias ll="gls $LS_OPTIONS -lhF"
+alias c="clear"
+alias weather="curl http://wttr.in/48197"
+
+# Aliased scripts
+alias passgen="python ~/etc/scripts/passgen.py"
+alias pm="cat ~/Documents/Visual\ Compass/projects/vcweb/txt/pm.txt"
+alias colors="python ~/etc/scripts/unowns.py"
+# alias python="bpython"
