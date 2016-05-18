@@ -28,8 +28,8 @@ C_DEF="\033[0m"
 C_RED="\033[0;31m"
 C_GRN="\033[0;32m"
 C_YLW="\033[0;33m"
+C_BLU="\033[0;36m"
 C_WHT="\033[0;37m"
-C_ORG="\033[35;1m"
 C_OCH="\033[38;5;95m"
 
 # get git status for color
@@ -64,7 +64,7 @@ function git_branch {
 
 # set prompt style and include git branch name
 PS1="\[$C_RED\]\u\[$C_DEF\]:"
-PS1+="\[$C_ORG\]\w"
+PS1+="\[$C_BLU\]\w"
 PS1+="\[\$(git_color)\]\$(git_branch)\[$C_DEF\]\$ "
 export PS1
 
