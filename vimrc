@@ -79,7 +79,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " start plugin definition
-Plugin 'itchyny/lightline.vim'
+Plugin 'Lokaltog/vim-powerline'
 
 " end plugin definition
 call vundle#end()
