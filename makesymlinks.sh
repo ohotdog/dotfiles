@@ -7,6 +7,20 @@
 dir=~/dotfiles
 olddir=~/dotfiles_old
 files="bash_profile bashrc gitconfig nanorc vimrc"
+update=false
+
+# check if files exist before continuing
+for file in $files; do
+    if [ ! -h ~/.$file ]; then
+       update=true 
+    fi
+done
+
+# if no file exists exit
+if [ $update = false ]; then
+    echo "Nothing to udpate"
+    exit 1
+fi
 
 # create dotfiles_old in ~
 if [ ! -d "$olddir" ]; then
