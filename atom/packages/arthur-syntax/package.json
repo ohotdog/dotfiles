@@ -1,0 +1,36 @@
+{
+  "name": "arthur-syntax",
+  "theme": "syntax",
+  "version": "1.1.2",
+  "description": "Atom syntax theme based on the Arthur terminal theme",
+  "keywords": [
+    "arthu",
+    "dark",
+    "syntax"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohotdog/arthur-syntax.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">1.0.0"
+  },
+  "readme": "## Atom Syntax\n\nThis Atom theme is identical to the [One Dark](https://atom.io/themes/one-dark-syntax) theme, except that the colors have been replaced with colors found in Arthur terminal theme.\n\n### Install\n\n```\napm install arthur-syntax\n```\n\nOr go to __Settings > Install__ and search for `arthur-syntax`.\n\nThen after installing, select \"Arthur\" from the __Settings > Themes > Syntax Themes__ drop-down menu.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/ohotdog/arthur/issues"
+  },
+  "homepage": "https://github.com/ohotdog/arthur-syntax#readme",
+  "_id": "arthur-syntax@1.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
