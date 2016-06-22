@@ -10,6 +10,7 @@ Thumbs.db
 # Software genereated files #
 #############################
 *.swp
+config.codekit
 
 # Web files #
 ###################
