@@ -11,6 +11,7 @@ Thumbs.db
 #############################
 *.swp
 config.codekit
+*.scssc
 
 # Web files #
 ###################

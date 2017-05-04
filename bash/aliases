@@ -7,7 +7,5 @@ alias c="clear"
 
 alias weather="curl http://wttr.in/48197"
 alias passgen="python ~/etc/scripts/passgen.py"
-alias pm="cat ~/Documents/Visual\ Compass/projects/vcweb/txt/pm.txt"
 alias colors="python ~/etc/scripts/unowns.py"
 alias serve="php -S localhost:8000"
-# alias python="bpython"
