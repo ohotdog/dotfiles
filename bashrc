@@ -70,3 +70,6 @@ export PS1
 
 # ls colors
 eval `gdircolors -b ~/dotfiles/bash/dir_colors`
+
+# cd to Desktop, I always end up there anyway
+cd ~/Desktop

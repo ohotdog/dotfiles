@@ -2,7 +2,7 @@
 no <down> <Nop>
 no <left> <Nop>
 no <right> <Nop>
-no <up> <Nop> 
+no <up> <Nop>
 ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
@@ -70,6 +70,14 @@ set softtabstop=4
 " no lines longer than 80 cols
 set textwidth=80
 
+"----------------mcantor thoughtbot talk--------------
+" search down into subfolders
+" provides tab-completion for all file-related tasks
+set path+=**
+
+" display all matching files when we tab complete
+set wildmenu
+
 "------------------plugin configuration---------------
 " set the runtime path include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -87,5 +95,3 @@ Plugin 'Lokaltog/vim-powerline'
 call vundle#end()
 
 filetype plugin indent on
-
-" colorscheme wombat256
