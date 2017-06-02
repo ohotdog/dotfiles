@@ -78,6 +78,16 @@ set path+=**
 " display all matching files when we tab complete
 set wildmenu
 
+"   :find tab completing file search
+"   :b autocomplete open buffer
+"   :ls list open buffers
+"   ^n autocomplete
+"   ^x^n just current file
+"   ^x^f for filename (or path)
+"   :help
+"   :helpgrep
+"   cl, cn, cp, cc<#> to navigate helpgrep
+
 "------------------plugin configuration---------------
 " set the runtime path include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim

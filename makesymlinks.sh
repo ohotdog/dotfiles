@@ -6,7 +6,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bash_profile bashrc gitconfig nanorc vimrc"
+files="bash_profile bashrc gitconfig nanorc vimrc inputrc"
 update=false
 
 # check if files exist before continuing

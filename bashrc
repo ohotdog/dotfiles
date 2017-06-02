@@ -1,7 +1,15 @@
 # .bashrc
+# change default editor to vim
 export EDITOR="vim"
 
+# use vi style editing in bash
 set -o vi
+
+# show mode in prompt :^)
+set show-mode-in-prompt on
+set vi-ins-mode-string "+"
+set vi-cmd-mode-string ":"
+set vi-cmd-mode-string "\1\e[1;31m\2:\1\e[0m\2"
 
 # source global definitions
 if [ -f /etc/bashrc ]; then
