@@ -1,8 +1,8 @@
 #!/bin/bash
 export LS_OPTIONS="--color=always --group-directories-first"
 
-alias ls="gls $LS_OPTIONS -hF"
-alias ll="gls $LS_OPTIONS -lhF"
+alias ls="ls $LS_OPTIONS -hF"
+alias ll="ls $LS_OPTIONS -lhF"
 alias c="clear"
 alias lynx="lynx -vikeys"
 
@@ -10,5 +10,4 @@ alias tbg="python ~/Desktop/Projects/tbg/tbg.py"
 alias weather="curl http://wttr.in/48197"
 alias passgen="python ~/etc/scripts/passgen.py"
 alias colors="python ~/etc/scripts/unowns.py"
-alias serve="php -S localhost:8000"
-alias pythong="echo INSERT THONG RELATED ASCII ART"
+alias pythong="echo HAHA THONG RELATED ASCII ART"
