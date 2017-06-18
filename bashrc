@@ -77,7 +77,4 @@ PS1+="\[\$(git_color)\]\$(git_branch)\[$C_DEF\]\$ "
 export PS1
 
 # ls colors
-eval `gdircolors -b ~/dotfiles/bash/dir_colors`
-
-# cd to Desktop, I always end up there anyway
-cd ~/Desktop
+eval `dircolors -b ~/dotfiles/bash/dir_colors`
