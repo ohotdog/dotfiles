@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/Alec/dotfiles/gitignore_global
+	excludesfile = ~/dotfiles/gitignore_global
 [user]
 	name = Alec Campbell
 	email = aleccamp94@gmail.com
