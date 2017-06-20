@@ -1,0 +1,159 @@
+##Basic Settings##
+# Directional keys
+set $up k
+set $down j
+set $left h
+set $right l
+
+# Mod key
+set $mod1 Mod1
+set $mod2 Mod4
+floating_modifier $mod1
+
+# Reload config / Restart i3 / Exit i3 
+bindsym $mod1+Shift+c reload
+bindsym $mod1+Shift+r restart
+bindsym $mod1+Shift+e exec i3-msg exit
+
+
+##Window management##
+# Kill focused window
+bindsym $mod1+Shift+q	kill
+bindsym $mod1+q		kill
+
+# Change focus
+bindsym $mod1+$left focus left
+bindsym $mod1+$down focus down
+bindsym $mod1+$up focus up
+bindsym $mod1+$right focus right
+
+# Move focused window
+bindsym $mod1+Shift+$left move left
+bindsym $mod1+Shift+$down move down
+bindsym $mod1+Shift+$up move up
+bindsym $mod1+Shift+$right move right
+
+# Split in horizontal orientation
+bindsym $mod1+Shift+v split h
+
+# Split in vertical orientation
+bindsym $mod1+v split v
+
+# Enter fullscreen mode for the focused window
+bindsym $mod1+f fullscreen toggle
+
+# Switch to workspace
+bindsym $mod1+1 workspace 1
+bindsym $mod1+2 workspace 2
+bindsym $mod1+3 workspace 3
+bindsym $mod1+4 workspace 4
+bindsym $mod1+5 workspace 5
+bindsym $mod1+6 workspace 6
+bindsym $mod1+7 workspace 7
+bindsym $mod1+8 workspace 8
+bindsym $mod1+9 workspace 9
+bindsym $mod1+0 workspace 10
+
+# Next / previous workspace
+bindsym $mod1+period workspace next
+bindsym $mod1+comma workspace prev
+
+# Move focused container to workspace
+bindsym $mod1+Shift+1 move container to workspace 1
+bindsym $mod1+Shift+2 move container to workspace 2
+bindsym $mod1+Shift+3 move container to workspace 3
+bindsym $mod1+Shift+4 move container to workspace 4
+bindsym $mod1+Shift+5 move container to workspace 5
+bindsym $mod1+Shift+6 move container to workspace 6
+bindsym $mod1+Shift+7 move container to workspace 7
+bindsym $mod1+Shift+8 move container to workspace 8
+bindsym $mod1+Shift+9 move container to workspace 9
+bindsym $mod1+Shift+0 move container to workspace 10
+
+# Resize window 
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod1+r mode "resize"
+
+
+##i3-gaps##
+# Basic Settings
+hide_edge_borders both
+for_window [class="^.*"] border pixel 0
+gaps inner 20
+
+
+##Bar##
+# i3bar
+bar {
+        status_command i3status
+	mode dock
+	position top
+	font pango:open sans 7.8
+	strip_workspace_numbers yes
+	
+	colors {
+		# background #e4e5e8
+		# statusline #788491
+		# separator  #51c4d4
+
+		# focused_workspace   #e4e5e8 #e4e5e8 #71b2de
+		# active_workspace    #e4e5e8 #e4e5e8 #71b2de
+		# inactive_workspace  #e4e5e8 #e4e5e8 #94aaab
+		# urgent_workspace    #e4e5e8 #e4e5e8 #94aaab
+	}
+}
+
+
+##Keyboard/touchpad##
+# Remap capslock and escape
+exec --no-startup-id setxkbmap -option caps:escape
+exec --no-startup-id setxkbmap -option escape:caps
+
+# Audio volume keybindings
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set -c 0 Master 2%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set -c 0 Master 2%-
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer set -c 0 Master 15%+
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer set -c 0 Master 15%-
+bindsym XF86AudioMute exec --no-startup-id amixer -c 0 set Master toggle
+
+# Disable touchpad
+exec --no-startup-id exec synclient TouchpadOff=1
+
+
+##Appearance##
+# Background
+exec_always --no-startup-id feh --bg-center --no-fehbg ~/.bg
+
+# Make cursor disappear after a little while
+exec --no-startup-id unclutter
+
+# Font
+font pango:nimbus sans 8
+
+# Colors
+client.focused #ecedee #ecedee #4fc0e8 
+client.unfocused #ecedee #ecedee #c1d1e0
+client.focused_inactive #ecedee #ecedee #c1d1e0
+client.urgent #51c4d4 #ecedee #51c4d4
+
+##Programs##
+# Shortcuts
+bindsym $mod1+space exec dmenu_run
+bindsym $mod1+Return exec urxvt
+bindsym $mod1+Shift+x exec i3lock -c 000000
