@@ -106,26 +106,22 @@ bar {
         status_command conky -c $HOME/.config/conky/config 
 	mode dock
 	position top
-	font pango:open sans 7.8
+	font pango:open sans 9
 	strip_workspace_numbers yes
-	
-	colors {
-		# background #e4e5e8
-		# statusline #788491
-		# separator  #51c4d4
-
-		# focused_workspace   #e4e5e8 #e4e5e8 #71b2de
-		# active_workspace    #e4e5e8 #e4e5e8 #71b2de
-		# inactive_workspace  #e4e5e8 #e4e5e8 #94aaab
-		# urgent_workspace    #e4e5e8 #e4e5e8 #94aaab
-	}
 }
 
 
+##Appearance##
+# Set wallpaper and colorscheme
+exec --no-startup-id wal -i $HOME/.bg
+
+# Make cursor disappear after a little while
+exec --no-startup-id unclutter
+
 ##Keyboard/touchpad##
 # Remap capslock and escape
-exec --no-startup-id setxkbmap -option caps:escape
-exec --no-startup-id setxkbmap -option escape:caps
+exec_always --no-startup-id setxkbmap -option caps:escape
+
 
 # Audio volume keybindings
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set -c 0 Master 2%+
@@ -137,22 +133,6 @@ bindsym XF86AudioMute exec --no-startup-id amixer -c 0 set Master toggle
 # Disable touchpad
 exec --no-startup-id exec synclient TouchpadOff=1
 
-
-##Appearance##
-# Background
-exec_always --no-startup-id feh --bg-center --no-fehbg ~/.bg
-
-# Make cursor disappear after a little while
-exec --no-startup-id unclutter
-
-# Font
-font pango:nimbus sans 8
-
-# Colors
-client.focused #ecedee #ecedee #4fc0e8 
-client.unfocused #ecedee #ecedee #c1d1e0
-client.focused_inactive #ecedee #ecedee #c1d1e0
-client.urgent #51c4d4 #ecedee #51c4d4
 
 ##Programs##
 # Shortcuts

@@ -78,3 +78,4 @@ export PS1
 
 # ls colors
 eval `dircolors -b ~/dotfiles/bash/dir_colors`
+
