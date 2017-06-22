@@ -5,7 +5,7 @@ set $down j
 set $left h
 set $right l
 
-# Mod key
+# Mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod1 Mod1
 set $mod2 Mod4
 floating_modifier $mod1
@@ -33,11 +33,9 @@ bindsym $mod1+Shift+$down move down
 bindsym $mod1+Shift+$up move up
 bindsym $mod1+Shift+$right move right
 
-# Split in horizontal orientation
-bindsym $mod1+Shift+v split h
-
-# Split in vertical orientation
-bindsym $mod1+v split v
+# Split orientation
+bindsym $mod1+v split v;exec notify-send 'tile vertically'
+bindsym $mod1+Shift+v split h;exec notify-send 'tile horizontally'
 
 # Enter fullscreen mode for the focused window
 bindsym $mod1+f fullscreen toggle
@@ -60,16 +58,17 @@ bindsym $mod1+Shift+0 move container to workspace 10
 
 # Resize window 
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window's width.
-        # Pressing right will grow the window's width.
-        # Pressing up will shrink the window's height.
-        # Pressing down will grow the window's height.
+        # Resize in increments of 10
         bindsym $left       resize shrink width 10 px or 10 ppt
         bindsym $down       resize grow height 10 px or 10 ppt
         bindsym $up         resize shrink height 10 px or 10 ppt
         bindsym $right      resize grow width 10 px or 10 ppt
+
+        # Resize in increments of 1
+        bindsym Shift+$left       resize shrink width 1 px or 1 ppt
+        bindsym Shift+$down       resize grow height 1 px or 1 ppt
+        bindsym Shift+$up         resize shrink height 1 px or 1 ppt
+        bindsym Shift+$right      resize grow width 1 px or 1 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -100,35 +99,23 @@ for_window [class="^.*"] border pixel 0
 gaps inner 20
 
 
-##Bar##
-# i3bar
-bar {
-        status_command conky -c $HOME/.config/conky/config 
-	mode dock
-	position top
-	font pango:open sans 9
-	strip_workspace_numbers yes
-}
-
-
-##Appearance##
-# Set wallpaper and colorscheme
-exec --no-startup-id wal -i $HOME/.bg -q
-
-# Make cursor disappear after a little while
-exec --no-startup-id unclutter
-
 ##Keyboard/touchpad##
 # Remap capslock and escape
 exec_always --no-startup-id setxkbmap -option caps:escape
 
 
-# Audio volume keybindings
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set -c 0 Master 2%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set -c 0 Master 2%-
+# Audio keybindings
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set -c 0 Master 2%+; notify-send 'vol +2%'"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set -c 0 Master 2%-; notify-send 'vol -2%'"
 bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer set -c 0 Master 15%+
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer set -c 0 Master 15%-
 bindsym XF86AudioMute exec --no-startup-id amixer -c 0 set Master toggle
+bindsym $mod1+XF86AudioRaiseVolume exec --no-startup-id urxvt -e 'alsamixer'
+bindsym $mod1+XF86AudioLowerVolume exec --no-startup-id urxvt -e 'alsamixer'
+
+# Screen brightness
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Disable touchpad
 exec --no-startup-id exec synclient TouchpadOff=1
@@ -138,4 +125,26 @@ exec --no-startup-id exec synclient TouchpadOff=1
 # Shortcuts
 bindsym $mod1+space exec --no-startup-id dmenu_run
 bindsym $mod1+Return exec --no-startup-id urxvt
-bindsym $mod1+Shift+x exec --no-startup-id i3lock -c 000000
+
+# Startup programs
+exec --no-startup-id xautolock -time 30 -locker i3blurlock
+exec --no-startup-id volumeicon
+exec --no-startup-id wal -i $HOME/.bg -q
+exec --no-startup-id unclutter
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# i3exit
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3blurlock, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod1+Shift+Escape mode "$mode_system"
