@@ -62,10 +62,10 @@ bindsym $mod1+Shift+0 move container to workspace 10
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
+        # Pressing left will shrink the window's width.
+        # Pressing right will grow the window's width.
+        # Pressing up will shrink the window's height.
+        # Pressing down will grow the window's height.
         bindsym $left       resize shrink width 10 px or 10 ppt
         bindsym $down       resize grow height 10 px or 10 ppt
         bindsym $up         resize shrink height 10 px or 10 ppt
@@ -113,7 +113,7 @@ bar {
 
 ##Appearance##
 # Set wallpaper and colorscheme
-exec --no-startup-id wal -i $HOME/.bg
+exec --no-startup-id wal -i $HOME/.bg -q
 
 # Make cursor disappear after a little while
 exec --no-startup-id unclutter
