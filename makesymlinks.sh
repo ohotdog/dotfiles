@@ -3,7 +3,7 @@
 # Set variables
 dir=~/dotfiles
 olddir=~/.dotfiles_old
-files="bg bash_profile bashrc gitconfig inputrc vimrc xinitrc Xresources config/i3/config config/conky/config"
+files="bg bash_profile bashrc gitconfig inputrc vimrc xinitrc Xresources config/i3/config config/conky/config config/dunst/dunstrc"
 update=false
 
 # Check if files exist before continuing
