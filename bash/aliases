@@ -7,5 +7,8 @@ alias c="clear"
 alias lynx="lynx -vikeys"
 alias ~="cd ~ && ls -a"
 
+alias pacman="sudo pacman"
+alias wifi-menu="sudo wifi-menu"
+
 alias weather="curl http://wttr.in/48197"
 alias pythong="echo HAHA THONG RELATED ASCII ART"
