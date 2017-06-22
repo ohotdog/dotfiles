@@ -1,4 +1,4 @@
-URxvt.scrollbar: false
+URxvt.scrollBar: false
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger: C-Up
-
+URxvt.internalBorder: 4
