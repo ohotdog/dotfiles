@@ -127,10 +127,14 @@ bindsym $mod1+space exec --no-startup-id dmenu_run
 bindsym $mod1+Return exec --no-startup-id urxvt
 
 # Startup programs
+exec --no-startup-id xrdb -merge $HOME/.cache/wal/colors.xresources
+exec --no-startup-id sh $HOME/.fehbg
 exec --no-startup-id xautolock -time 30 -locker i3blurlock
 exec --no-startup-id volumeicon
-exec --no-startup-id wal -i $HOME/.bg -q
 exec --no-startup-id unclutter
+exec --no-startup-id nm-applet
+exec --no-startup-id dunst
+exec --no-startup-id compton
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # i3exit
