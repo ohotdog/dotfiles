@@ -71,7 +71,7 @@ function git_branch {
 }
 
 # set prompt style and include git branch name
-PS1="\[$C_RED\]\u\[$C_DEF\]:"
+PS1="\[$C_GRN\]\u\[$C_DEF\]:"
 PS1+="\[$C_BLU\]\w"
 PS1+="\[\$(git_color)\]\$(git_branch)\[$C_DEF\]\$ "
 export PS1
