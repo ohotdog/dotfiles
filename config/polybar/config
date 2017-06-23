@@ -20,8 +20,6 @@ foreground 	= ${xrdb:color15}
 background 	= ${xrdb:color0}
 
 [bar/main_bar]
-;monitor = ${env:MONITOR:HDMI1}
-;monitor = ${env:MONITOR:eDP1}
 monitor = ${env:MONITOR:LVDS1}
 bottom = false
 width = 100%
@@ -46,14 +44,14 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = monofur:fontformat=truetype:size=9;1
-font-1 = monofur:fontformat=truetype:size=9;1
-font-2 = monofur:fontformat=truetype:size=9;1
+font-0 = Hack:fontformat=truetype:size=9;1
+font-1 = Hack:fontformat=truetype:size=9;1
+font-2 = Hack:fontformat=truetype:size=9;1
 font-3 = Droid Sans Fallback:size=9;1
 
 modules-left = i3
 modules-center = date
-modules-right = musicinfo
+modules-right = musicinfo battery
 
 tray-position = right
 tray-padding = 9
@@ -65,8 +63,6 @@ tray-detached = false
 tray-background = ${colors.color00}
 
 wm-restack = i3
-
-;override-redirect = true
 
 
 [module/i3]
@@ -141,13 +137,8 @@ format-underline =
 label = %date% %time%
 
 
-
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
 
 
 [global/wm]
