@@ -13,7 +13,6 @@ floating_modifier $mod1
 # Reload config / Restart i3 / Exit i3 
 bindsym $mod1+Shift+c reload
 bindsym $mod1+Shift+r restart
-bindsym $mod1+Shift+e exec i3-msg exit
 
 
 ##Window management##
@@ -70,7 +69,7 @@ mode "resize" {
         bindsym Shift+$up         resize shrink height 1 px or 1 ppt
         bindsym Shift+$right      resize grow width 1 px or 1 ppt
 
-        # back to normal: Enter or Escape
+        # Back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
@@ -134,14 +133,14 @@ exec --no-startup-id volumeicon
 exec --no-startup-id unclutter
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
-exec --no-startup-id compton
+exec --no-startup-id compton -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # i3exit
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3blurlock, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym e exec --no-startup-id killall -q polybar && i3exit logout, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
