@@ -38,20 +38,19 @@ C_GRN="\033[0;32m"
 C_YLW="\033[0;33m"
 C_BLU="\033[0;36m"
 C_WHT="\033[0;37m"
-C_OCH="\033[38;5;95m"
 
 # get git status for color
 function git_color {
   local git_status="$(git status 2> /dev/null)"
 
   if [[ $git_status =~ "Changes not staged for commit" ]]; then
-    echo -e $C_OCH
+    echo -e $C_RED
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
-    echo -e $C_YLW
+    echo -e $C_BLU
   elif [[ $git_status =~ "nothing to commit" ]]; then
     echo -e $C_GRN
   else
-    echo -e $C_RED
+    echo -e $C_YLW
   fi
 }
 
