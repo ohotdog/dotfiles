@@ -45,13 +45,13 @@ function git_color {
   local git_status="$(git status 2> /dev/null)"
 
   if [[ $git_status =~ "Changes not staged for commit" ]]; then
-    echo -e $C_RED
+    echo -e $C_OCH
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
     echo -e $C_YLW
   elif [[ $git_status =~ "nothing to commit" ]]; then
     echo -e $C_GRN
   else
-    echo -e $C_OCH
+    echo -e $C_RED
   fi
 }
 
