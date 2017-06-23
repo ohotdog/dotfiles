@@ -46,11 +46,11 @@ function git_color {
   if [[ $git_status =~ "Changes not staged for commit" ]]; then
     echo -e $C_RED
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
-    echo -e $C_BLU
+    echo -e $C_YLW
   elif [[ $git_status =~ "nothing to commit" ]]; then
     echo -e $C_GRN
   else
-    echo -e $C_YLW
+    echo -e $C_BLU
   fi
 }
 
