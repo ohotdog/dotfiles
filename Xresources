@@ -12,6 +12,6 @@ Xft.lcdfilter:	lcddefault
 !! urxvt
 URxvt.scrollBar:	false
 URxvt.internalBorder:	20
-URxvt.font:		xft:Hack:pixelsize=12
+URxvt.font:		xft:Hack:pixelsize=13
 URxvt.cursorBlink:	true
 
