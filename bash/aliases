@@ -5,6 +5,7 @@ alias ls="ls $LS_OPTIONS -hF"
 alias ll="ls $LS_OPTIONS -lhF"
 alias diff="diff --color=auto"
 alias c="clear"
+alias v="vim"
 alias lynx="lynx -vikeys"
 alias ~="cd ~ && ls -a"
 
