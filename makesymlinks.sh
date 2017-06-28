@@ -3,7 +3,7 @@
 # Set variables
 dir=~/dotfiles
 olddir=~/.dotfiles_old
-files="bash_profile bashrc gitconfig inputrc vimrc xinitrc Xresources config/i3/config config/dunst/dunstrc config/polybar/config config/polybar/launch.sh config/user-dirs.dirs vim/bundle/Vundle.vim"
+files="bash_profile bashrc gitconfig inputrc vimrc xinitrc Xresources config/i3/config config/dunst/dunstrc config/polybar/config config/polybar/launch.sh config/ranger/rc.conf config/user-dirs.dirs vim/bundle/Vundle.vim"
 update=false
 
 # Check if files exist before continuing
