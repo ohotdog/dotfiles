@@ -3,10 +3,8 @@ Xft.dpi:	96
 Xft.antialias:	true
 Xft.autohint:	false
 Xft.hinting:	true
-! hintnone, hintslight, hintmedium, hintfull
 Xft.hintstyle:	hintmedium
 Xft.rgba:	rgb
-! lcdnone, lcddefault, lcdlight, lcdlegacy
 Xft.lcdfilter:	lcddefault
 
 !! urxvt
@@ -16,4 +14,11 @@ URxvt.font:		xft:Hack:pixelsize=13,xft:FontAwesome:pixelsize=13
 URxvt.boldFont:		xft:Hack-Bold:pixelsize=13:weight=bold,xft:FontAwesome:pixelsize=13
 URxvt.italicFont:	xft:Hack-RegularOblique:pixelsize=13:slant=italic,xft:FontAwesome:pixelsize=13
 URxvt.cursorBlink:	true
+
+! Enable copy/paste with Ctrl+Shift+c/v
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.perl-ext-common: default, clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
