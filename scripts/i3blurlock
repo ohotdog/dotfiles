@@ -1,4 +1,47 @@
-#!/bin/bash
-scrot /tmp/lock.png
-convert /tmp/lock.png -blur 0x5 /tmp/lock.png
-i3lock -i /tmp/lock.png
+#!/bin/sh
+
+white=$(xrdb -query | grep *color15 | cut -f 2)
+black=$(xrdb -query | grep *color0 | cut -f 2)
+red=$(xrdb -query | grep *color1: | cut -f 2)
+
+lock=$(printf "\uf023")
+
+white=${white:1}77
+black=${black:1}33
+red=${red:1}99
+morewhite="#ffffff99"
+morewhiter="#ffffffdd"
+blank='#00000000'
+
+i3lock                      \
+--insidevercolor=$black     \
+--ringvercolor=$white       \
+\
+--insidewrongcolor=$black   \
+--ringwrongcolor=$red       \
+\
+--insidecolor=$black        \
+--ringcolor=$white          \
+--linecolor=$blank          \
+--separatorcolor=$blank     \
+\
+--blur 5                    \
+--keyhlcolor=$morewhite     \
+--bshlcolor=$red            \
+--screen 0                  \
+--indicator                 \
+\
+--clock                     \
+--timefont="FontAwesome"    \
+--timecolor=$morewhiter     \
+--timesize=118              \
+--timestr="$lock"           \
+--timepos="ix-(cw/2):iy-60" \
+\
+--datecolor=$morewhite      \
+--datestr=""                \
+\
+--textcolor=$morewhite      \
+--wrongtext="ya tried"      \
+--veriftext="..."           \
+\
