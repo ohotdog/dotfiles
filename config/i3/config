@@ -76,6 +76,8 @@ mode "resize" {
 
 bindsym $mod1+r mode "resize"
 
+# Floating
+bindsym $mod1+w floating toggle
 
 ##Workspace management##
 # Switch to workspace
