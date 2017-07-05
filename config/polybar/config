@@ -1,5 +1,4 @@
 [colors]
-
 color15	= ${xrdb:color15}
 color14	= ${xrdb:color14}
 color13	= ${xrdb:color13}
@@ -18,6 +17,7 @@ color01      = ${xrdb:color1}
 color00	= ${xrdb:color0}
 foreground 	= ${xrdb:color15}
 background 	= ${xrdb:color0}
+
 
 [bar/main_bar]
 monitor = ${env:MONITOR:LVDS1}
@@ -78,6 +78,7 @@ label-unfocused-foreground = ${colors.color02}
 label-mode = %mode%
 label-mode-padding = 1
 label-mode-background = ${colors.color04}
+label-mode-foreground = ${colors.color00}
 
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
@@ -108,6 +109,7 @@ ws-icon-5 = 6;6
 ws-icon-6 = 7;7
 ws-icon-7 = 8;8
 
+
 [module/musicinfo]
 type = custom/script
 
@@ -131,7 +133,6 @@ time-alt = %H:%M
 
 format-prefix-foreground = ${colors.foreground}
 format-underline =
-
 
 label = %date% %time%
 
@@ -170,6 +171,7 @@ animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 750
 
+
 [settings]
 screenchange-reload = true
 
@@ -177,6 +179,7 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
 
 [module/xwindow]
 type = internal/xwindow
