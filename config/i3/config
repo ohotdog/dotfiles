@@ -115,8 +115,8 @@ bindsym $mod1+XF86AudioRaiseVolume exec --no-startup-id urxvt -e 'alsamixer'
 bindsym $mod1+XF86AudioLowerVolume exec --no-startup-id urxvt -e 'alsamixer'
 
 # Screen brightness
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Disable touchpad
 exec --no-startup-id exec synclient TouchpadOff=1
