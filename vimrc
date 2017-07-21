@@ -7,6 +7,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ap/vim-css-color'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on

@@ -10,7 +10,7 @@ set $mod1 Mod1
 set $mod2 Mod4
 floating_modifier $mod1
 
-# Reload config / Restart i3 / Exit i3 
+# Reload config / Restart i3
 bindsym $mod1+Shift+c reload
 bindsym $mod1+Shift+r restart
 
@@ -110,7 +110,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set -c 0 Master 2%+; n
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set -c 0 Master 2%-; notify-send 'vol -2%'"
 bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer set -c 0 Master 15%+
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer set -c 0 Master 15%-
-bindsym XF86AudioMute exec --no-startup-id amixer -c 0 set Master toggle
+# bindsym XF86AudioMute exec --no-startup-id amixer -c 0 set Master toggle
 bindsym $mod1+XF86AudioRaiseVolume exec --no-startup-id urxvt -e 'alsamixer'
 bindsym $mod1+XF86AudioLowerVolume exec --no-startup-id urxvt -e 'alsamixer'
 
