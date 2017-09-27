@@ -14,6 +14,23 @@ floating_modifier $mod1
 bindsym $mod1+Shift+c reload
 bindsym $mod1+Shift+r restart
 
+# Color variables
+set_from_resource $color0 i3wm.color0 #000000
+set_from_resource $color1 i3wm.color1 #000000
+set_from_resource $color2 i3wm.color2 #000000
+set_from_resource $color3 i3wm.color3 #000000
+set_from_resource $color4 i3wm.color4 #000000
+set_from_resource $color5 i3wm.color5 #000000
+set_from_resource $color6 i3wm.color6 #000000
+set_from_resource $color7 i3wm.color7 #000000
+set_from_resource $color8 i3wm.color8 #000000
+set_from_resource $color9 i3wm.color9 #000000
+set_from_resource $color10 i3wm.color10 #000000
+set_from_resource $color11 i4wm.color11 #000000
+set_from_resource $color12 i3wm.color12 #000000
+set_from_resource $color13 i3wm.color13 #000000
+set_from_resource $color14 i3wm.color14 #000000
+set_from_resource $color15 i3wm.color15 #000000
 
 ##Window management##
 # Kill focused window
@@ -99,6 +116,9 @@ hide_edge_borders both
 for_window [class="^.*"] border pixel 0
 gaps inner 20
 
+# Gaps shortcuts
+bindsym $mod1+g gaps inner current set 0;
+bindsym $mod1+Shift+g gaps inner current set 20;
 
 ##Keyboard/touchpad##
 # Remap capslock and escape
@@ -124,7 +144,7 @@ exec --no-startup-id exec synclient TouchpadOff=1
 
 ##Programs##
 # Shortcuts
-bindsym $mod1+space exec --no-startup-id dmenu_run
+bindsym $mod1+space exec --no-startup-id dmenu_run -nb '$color0' -nf '$color15' -sb '$color1' -sf '#dddddd'
 bindsym $mod1+Return exec --no-startup-id urxvt
 
 # Startup programs
