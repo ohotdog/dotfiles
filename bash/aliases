@@ -11,6 +11,7 @@ alias ~="cd ~ && ls -a"
 
 alias dnd="cd ~/documents/D\&D/"
 alias cos="cd ~/documents/D\&D/Curse\ of\ Strahd"
+alias m="~/dotfiles/scripts/fuzzymon/monster.sh"
 
 alias pacman="sudo pacman"
 alias wifi-menu="sudo wifi-menu"
