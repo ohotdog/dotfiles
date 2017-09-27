@@ -38,6 +38,13 @@ set autoread
 set encoding=utf-8
 set fileencoding=utf-8
 
+" tab sizes
+set tabstop=8
+set softtabstop=0
+set expandtab
+set shiftwidth=2
+set smarttab
+
 "----------------mcantor thoughtbot talk--------------
 " search down into subfolders
 " provides tab-completion for all file-related tasks
