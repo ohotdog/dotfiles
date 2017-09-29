@@ -57,8 +57,8 @@ bindsym $mod1+Shift+v split h;exec notify-send 'tile horizontally'
 bindsym $mod1+f fullscreen toggle
 
 # Next / previous workspace
-bindsym $mod1+period workspace next
-bindsym $mod1+comma workspace prev
+bindsym $mod1+Tab workspace next
+bindsym $mod1+Shift+Tab workspace prev
 
 # Move focused window to workspace
 bindsym $mod1+Shift+1 move container to workspace 1
