@@ -16,6 +16,8 @@ filetype plugin indent on
 syntax on
 " show line number
 set number
+" disable auto insert of comment leaders
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " try to detect file types and load plugins for them
 filetype on
