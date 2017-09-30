@@ -26,7 +26,7 @@ set_from_resource $color7 i3wm.color7 #000000
 set_from_resource $color8 i3wm.color8 #000000
 set_from_resource $color9 i3wm.color9 #000000
 set_from_resource $color10 i3wm.color10 #000000
-set_from_resource $color11 i4wm.color11 #000000
+set_from_resource $color11 i3wm.color11 #000000
 set_from_resource $color12 i3wm.color12 #000000
 set_from_resource $color13 i3wm.color13 #000000
 set_from_resource $color14 i3wm.color14 #000000
