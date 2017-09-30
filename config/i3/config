@@ -146,7 +146,7 @@ exec --no-startup-id exec synclient TouchpadOff=1
 
 ##Programs##
 # Shortcuts
-bindsym $mod1+space exec --no-startup-id rofi -show run -font "Hack 10" -lines 6 -width 100 -location 2
+bindsym $mod1+space exec --no-startup-id rofi -show run -font "Hack 10" -lines 6 -width 100 -location 2 -padding 0
 bindsym $mod1+Return exec --no-startup-id urxvt
 
 # Startup programs
