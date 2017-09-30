@@ -124,7 +124,7 @@ bindsym $mod1+Shift+g gaps inner current set 20;
 
 ##Keyboard/touchpad##
 # Remap capslock and escape
-exec_always --no-startup-id setxkbmap -option caps:escape
+exec_always --no-startup-id setxkbmap -option caps:escape -option escape:caps
 
 
 # Audio keybindings
@@ -146,7 +146,7 @@ exec --no-startup-id exec synclient TouchpadOff=1
 
 ##Programs##
 # Shortcuts
-bindsym $mod1+space exec --no-startup-id dmenu_run -nb '$color0' -nf '$color15' -sb '$color1' -sf '#dddddd'
+bindsym $mod1+space exec --no-startup-id rofi -show run -font "Hack 10" -lines 6 -width 100 -location 2
 bindsym $mod1+Return exec --no-startup-id urxvt
 
 # Startup programs
