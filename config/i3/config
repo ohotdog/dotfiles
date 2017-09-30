@@ -32,6 +32,16 @@ set_from_resource $color13 i3wm.color13 #000000
 set_from_resource $color14 i3wm.color14 #000000
 set_from_resource $color15 i3wm.color15 #000000
 
+# i3 Colors
+# class                 border  backgr. text    indicator child_border
+client.focused          $color2 $color0 $color7 $color2   $color2
+client.focused_inactive $color3 $color0 $color7 $color2   #3d3d3d
+client.unfocused        $color3 $color0 $color7 $color2   #3d3d3d
+client.urgent           $color1 $color0 $color7 $color2   $color1
+client.placeholder      $color0 $color0 $color7 $color2   $color8
+
+client.background       $color7
+
 ##Window management##
 # Kill focused window
 bindsym $mod1+Shift+q	kill
@@ -114,9 +124,12 @@ bindsym $mod1+0 workspace 10
 
 ##i3-gaps##
 # Basic Settings
-hide_edge_borders both
-for_window [class="^.*"] border pixel 0
+# hide_edge_borders both
+for_window [class="^.*"] border pixel 1
 gaps inner 20
+
+# No border for firefox
+for_window [class="Firefox"] border pixel 0
 
 # Gaps shortcuts
 bindsym $mod1+g gaps inner current set 0;
@@ -124,7 +137,7 @@ bindsym $mod1+Shift+g gaps inner current set 20;
 
 ##Keyboard/touchpad##
 # Remap capslock and escape
-exec_always --no-startup-id setxkbmap -option caps:escape -option escape:caps
+exec_always --no-startup-id setxkbmap -option caps:swapescape
 
 
 # Audio keybindings
