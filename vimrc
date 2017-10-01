@@ -47,6 +47,10 @@ set expandtab
 set shiftwidth=2
 set smarttab
 
+" set incremental search
+" aka: jump to results while typing
+set incsearch
+
 "----------------mcantor thoughtbot talk--------------
 " search down into subfolders
 " provides tab-completion for all file-related tasks
