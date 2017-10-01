@@ -1,5 +1,4 @@
-# hacky script to fuzzily find a entry from a list
-# of monsters and print found entry
+# hacky script to fuzzily find an entry from a list of monsters and print found entry
 import re
 import sys
 
