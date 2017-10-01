@@ -1,4 +1,5 @@
 # source from bashrc in dotfiles
+# test
 . ~/dotfiles/bashrc
 
 export BROWSER=firefox
