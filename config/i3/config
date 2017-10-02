@@ -33,12 +33,12 @@ set_from_resource $color14 i3wm.color14 #000000
 set_from_resource $color15 i3wm.color15 #000000
 
 # i3 Colors
-# class                 border  backgr. text    indicator child_border
-client.focused          $color2 $color0 $color7 $color2   $color2
-client.focused_inactive $color3 $color0 $color7 $color2   #3d3d3d
-client.unfocused        $color3 $color0 $color7 $color2   #3d3d3d
-client.urgent           $color1 $color0 $color7 $color2   $color1
-client.placeholder      $color0 $color0 $color7 $color2   $color8
+# class                 border  backgr. text    indictr c.bordr
+client.focused          $color2 $color0 $color7 #3f3f3f #3f3f3f
+client.focused_inactive $color3 $color0 $color7 #222222 #222222
+client.unfocused        $color3 $color0 $color7 #222222 #222222
+client.urgent           $color1 $color0 $color7 $color1 $color1
+client.placeholder      $color0 $color0 $color7 $color8 $color8
 
 client.background       $color7
 
