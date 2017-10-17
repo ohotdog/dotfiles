@@ -51,6 +51,10 @@ set smarttab
 " aka: jump to results while typing
 set incsearch
 
+" set minimum amount of lines above or below cursor
+" aka: see more info when i'm zippin around
+set scrolloff=8
+
 "----------------mcantor thoughtbot talk--------------
 " search down into subfolders
 " provides tab-completion for all file-related tasks
