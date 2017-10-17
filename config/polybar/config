@@ -63,6 +63,49 @@ tray-background = ${colors.color00}
 
 wm-restack = i3
 
+[bar/ext_bar]
+monitor = ${env:MONITOR:VGA1}
+bottom = false
+width = 100%
+height = 20
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
+
+background = ${colors.color00}
+foreground =  ${colors.foreground}
+
+line-size = 3
+line-color = ${colors.color04}
+
+border-size = 0
+border-color = ${colors.color02}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Hack:fontformat=truetype:size=9;1
+font-1 = Hack:fontformat=truetype:size=9;1
+font-2 = FontAwesome:fontformat=truetype:size=10;1
+
+modules-left = i3 xwindow
+modules-center = date
+modules-right = battery
+
+tray-position = right
+tray-padding = 9
+tray-transparent = false
+tray-offset-y = 0%
+tray-offset-x = 0%
+tray-maxsize = 18
+tray-detached = false
+tray-background = ${colors.color00}
+
+wm-restack = i3
 
 [module/i3]
 type = internal/i3
