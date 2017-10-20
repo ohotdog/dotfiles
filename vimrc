@@ -55,6 +55,9 @@ set incsearch
 " aka: see more info when i'm zippin around
 set scrolloff=8
 
+" show command as it's being typed
+set showcmd
+
 " Ctrl-j/k inserts new line below/above cursor without 
 " changing cursor postion or entering insert mode
 nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
