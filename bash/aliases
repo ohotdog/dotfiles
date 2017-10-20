@@ -16,5 +16,7 @@ alias m="~/dotfiles/scripts/fuzzymon/monster.sh"
 alias pacman="sudo pacman"
 alias wifi-menu="sudo wifi-menu"
 
+alias neofetch="neofetch --gtk2 off --gtk3 off"
+
 alias weather="curl http://wttr.in/48197"
 alias pythong="echo HAHA THONG RELATED ASCII ART"
