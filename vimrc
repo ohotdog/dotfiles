@@ -55,6 +55,11 @@ set incsearch
 " aka: see more info when i'm zippin around
 set scrolloff=8
 
+" Ctrl-j/k inserts new line below/above cursor without 
+" changing cursor postion or entering insert mode
+nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
 "----------------mcantor thoughtbot talk--------------
 " search down into subfolders
 " provides tab-completion for all file-related tasks
