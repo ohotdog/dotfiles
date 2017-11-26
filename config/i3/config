@@ -169,6 +169,7 @@ exec --no-startup-id xautolock -time 30 -locker i3blurlock
 exec --no-startup-id volumeicon
 exec --no-startup-id unclutter
 exec --no-startup-id nm-applet
+exec --no-startup-id uim-toolbar-gtk
 exec --no-startup-id dunst
 exec --no-startup-id compton -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
