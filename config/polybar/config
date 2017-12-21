@@ -233,7 +233,7 @@ label = %temperature% 
 ;   %temperature% (default, in °C)
 ;   %temperature-c%   (temperature, in °C)
 ;   %temperature-f%   (temperature, in °F)
-label-warn = %temperature%
+label-warn = %temperature% 
 label-warn-foreground = ${colors.color03}
 
 ; Requires the <ramp> tag
