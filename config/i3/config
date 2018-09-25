@@ -143,8 +143,9 @@ exec_always --no-startup-id setxkbmap -option caps:swapescape
 # Audio keybindings
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set -c 0 Master 2%+; notify-send 'vol +2%'"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set -c 0 Master 2%-; notify-send 'vol -2%'"
-bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer set -c 0 Master 15%+
-bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer set -c 0 Master 15%-
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id "amixer set -c 0 Master 15%+; notify-send 'vol +15%'"
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id "amixer set -c 0 Master 15%-; notify-send 'vol -15%'"
+
 # bindsym XF86AudioMute exec --no-startup-id amixer -c 0 set Master toggle
 bindsym $mod1+XF86AudioRaiseVolume exec --no-startup-id urxvt -e 'alsamixer'
 bindsym $mod1+XF86AudioLowerVolume exec --no-startup-id urxvt -e 'alsamixer'
@@ -165,6 +166,9 @@ exec --no-startup-id exec synclient TouchpadOff=1
 # Shortcuts
 bindsym $mod1+space exec --no-startup-id rofi -show run -font "Hack 10" -lines 6 -width 100 -location 2 -padding 0
 bindsym $mod1+Return exec --no-startup-id urxvt
+bindsym $mod1+P exec --no-startup-id firefox
+bindsym $mod1+Shift+P exec --no-startup-id firefox --private-window
+bindsym $mod1+Shift+D exec --no-startup-id deepin-screenshot
 
 # Startup programs
 exec --no-startup-id xrdb -merge $HOME/.cache/wal/colors.xresources

@@ -8,6 +8,7 @@ alias c="clear"
 alias v="vim"
 alias lynx="lynx -vikeys"
 alias ~="cd ~ && ls -a"
+alias r="ranger"
 
 alias dnd="cd ~/documents/D\&D/"
 alias cos="cd ~/documents/D\&D/Curse\ of\ Strahd"
