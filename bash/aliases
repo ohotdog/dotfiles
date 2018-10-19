@@ -8,7 +8,11 @@ alias c="clear"
 alias v="vim"
 alias lynx="lynx -vikeys"
 alias ~="cd ~ && ls -a"
+
 alias r="ranger"
+alias jp="ranger ~/school/2018-Fall/JPNE122/"
+alias math="ranger ~/school/2018-Fall/MATH112/"
+alias cs="ranger ~/school/2018-Fall/COSC111/"
 
 alias dnd="cd ~/documents/D\&D/"
 alias cos="cd ~/documents/D\&D/Curse\ of\ Strahd"
