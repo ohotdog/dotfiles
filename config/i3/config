@@ -180,6 +180,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id uim-toolbar-gtk-systray
 exec --no-startup-id dunst
 exec --no-startup-id compton -b
+exec --no-startup-id sh $HOME/gakushuu/.entr.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # i3exit
