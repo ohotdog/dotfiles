@@ -10,11 +10,13 @@ Xft.lcdfilter:	lcddefault
 !! urxvt
 URxvt.scrollBar:	false
 URxvt.internalBorder:	20
-URxvt.font:		xft:Hack:pixelsize=13,xft:FontAwesome:pixelsize=13
-URxvt.boldFont:		xft:Hack-Bold:pixelsize=13:weight=bold,xft:FontAwesome:pixelsize=13
-URxvt.italicFont:	xft:Hack-RegularOblique:pixelsize=13:slant=italic,xft:FontAwesome:pixelsize=13
+URxvt.font:		xft:Hack:pixelsize=14,xft:TakaoGothic:antialias=on
+URxvt.boldFont:		xft:Hack-Bold:pixelsize=14:weight=bold,xft:TakaoGothic:antialias=on
+
+URxvt.italicFont:	xft:Hack-RegularOblique:pixelsize=14:slant=italic,xft:TakaoGothic:antialias=on
+
 URxvt.cursorBlink:	true
 
 !! font-size
-URxvt.perl-ext-common: font-size
+!! URxvt.perl-ext-common: font-size
 
