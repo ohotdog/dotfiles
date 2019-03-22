@@ -73,16 +73,40 @@ bindsym $mod1+period workspace next
 bindsym $mod1+comma workspace prev
 
 # Move focused window to workspace
-bindsym $mod1+Shift+1 move container to workspace 1
-bindsym $mod1+Shift+2 move container to workspace 2
-bindsym $mod1+Shift+3 move container to workspace 3
-bindsym $mod1+Shift+4 move container to workspace 4
-bindsym $mod1+Shift+5 move container to workspace 5
-bindsym $mod1+Shift+6 move container to workspace 6
-bindsym $mod1+Shift+7 move container to workspace 7
-bindsym $mod1+Shift+8 move container to workspace 8
-bindsym $mod1+Shift+9 move container to workspace 9
-bindsym $mod1+Shift+0 move container to workspace 10
+bindsym $mod2+Shift+1 move container to workspace 1
+bindsym $mod2+Shift+2 move container to workspace 2
+bindsym $mod2+Shift+3 move container to workspace 3
+bindsym $mod2+Shift+4 move container to workspace 4
+bindsym $mod2+Shift+5 move container to workspace 5
+bindsym $mod2+Shift+6 move container to workspace 6
+bindsym $mod2+Shift+7 move container to workspace 7
+bindsym $mod2+Shift+8 move container to workspace 8
+bindsym $mod2+Shift+9 move container to workspace 9
+bindsym $mod2+Shift+0 move container to workspace 10
+
+# Switch to workspace
+bindsym $mod1+1 workspace 1
+bindsym $mod1+2 workspace 2
+bindsym $mod1+3 workspace 3
+bindsym $mod1+4 workspace 4
+bindsym $mod1+5 workspace 5
+bindsym $mod1+6 workspace 6
+bindsym $mod1+7 workspace 7
+bindsym $mod1+8 workspace 8
+bindsym $mod1+9 workspace 9
+bindsym $mod1+0 workspace 10
+
+# Move focused window and switch to workspace
+bindsym $mod1+Shift+1 move container to workspace 1; WORKSPACE 1
+bindsym $mod1+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod1+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod1+Shift+4 move container to workspace 4; workspace 4
+bindsym $mod1+Shift+5 move container to workspace 5; workspace 5
+bindsym $mod1+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod1+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod1+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod1+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod1+Shift+0 move container to workspace 1; workspace 100
 
 # Resize window 
 mode "resize" {
@@ -108,19 +132,6 @@ bindsym $mod1+r mode "resize"
 # Floating
 bindsym $mod1+w floating toggle
 
-##Workspace management##
-# Switch to workspace
-bindsym $mod1+1 workspace 1
-bindsym $mod1+2 workspace 2
-bindsym $mod1+3 workspace 3
-bindsym $mod1+4 workspace 4
-bindsym $mod1+5 workspace 5
-bindsym $mod1+6 workspace 6
-bindsym $mod1+7 workspace 7
-bindsym $mod1+8 workspace 8
-bindsym $mod1+9 workspace 9
-bindsym $mod1+0 workspace 10
-
 
 ##i3-gaps##
 # Basic Settings
@@ -138,7 +149,6 @@ bindsym $mod1+Shift+g gaps inner current set 20;
 ##Keyboard/touchpad##
 # Remap capslock and escape
 exec_always --no-startup-id setxkbmap -option caps:swapescape
-
 
 # Audio keybindings
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set -c 0 Master 2%+; notify-send 'vol +2%'"

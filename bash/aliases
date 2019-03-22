@@ -16,8 +16,8 @@ alias cs="ranger ~/school/2018-Fall/COSC111/"
 
 alias k="vim ~/gakushuu/言葉"
 
-alias dnd="cd ~/documents/D\&D/"
-alias cos="cd ~/documents/D\&D/Curse\ of\ Strahd"
+alias dnd="cd ~/documents/rpgs/dnd/"
+alias cos="cd ~/documents/rpgs/dnd/Curse\ of\ Strahd"
 alias m="~/dotfiles/scripts/fuzzymon/monster.sh"
 
 alias pacman="sudo pacman"
