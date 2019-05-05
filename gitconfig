@@ -1,5 +1,6 @@
 [core]
 	excludesfile = ~/dotfiles/gitignore_global
+	editor = vim
 [user]
 	name = Alec Campbell
 	email = thisiswaysilly@gmail.com
