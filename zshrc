@@ -62,7 +62,10 @@ ZSH_THEME="alec"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  colored-man-pages
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,4 +95,16 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# turn off damn beepz
+unsetopt BEEP
+
+alias ls="ls --color=always --group-directories-first -hF"
+alias ll="ls --color=always --group-directories-first -lhF"
+alias c="clear"
+alias r="ranger"
+alias pacman="sudo pacman"
+alias weather="curl http://wttr.in/48197"
+alias feh="feh --scale-down"
+
+# zsh syntax highlighting (keep at bottom)
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
