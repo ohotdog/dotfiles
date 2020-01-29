@@ -3,7 +3,7 @@
 # Set variables
 dir=~/dotfiles
 olddir=~/.dotfiles_old
-files="bash_profile bashrc gitconfig inputrc vimrc xinitrc Xresources config/compton.conf config/i3/config config/dunst/dunstrc config/polybar/config config/polybar/launch.sh config/ranger/rc.conf config/user-dirs.dirs vim/bundle/Vundle.vim urxvt/ext/font-size config/mpv/mpv.conf zshrc zprofile"
+files="bash_profile bashrc gitconfig inputrc vimrc xinitrc Xresources config/compton.conf config/i3/config config/dunst/dunstrc config/dunst/play-sound.sh config/dunst/GotItem.WAV config/polybar/config config/polybar/launch.sh config/ranger/rc.conf config/user-dirs.dirs vim/bundle/Vundle.vim urxvt/ext/font-size config/mpv/mpv.conf zshrc zprofile"
 update=false
 
 # Check if files exist before continuing

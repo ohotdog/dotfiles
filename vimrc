@@ -80,3 +80,6 @@ set wildmenu
 "   :help
 "   :helpgrep
 "   cl, cn, cp, cc<#> to navigate helpgrep
+
+" Ctrl+C in visual mode to copy selection to clipboard
+vmap <C-c> "+y

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 white=$(xrdb -query | grep *color15 | cut -f 2)
 black=$(xrdb -query | grep *color0 | cut -f 2)
@@ -42,6 +42,6 @@ i3lock                      \
 --datestr=""                \
 \
 --textcolor=$morewhite      \
---wrongtext="ya tried"      \
+--wrongtext="残念"      \
 --veriftext="..."           \
 \

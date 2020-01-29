@@ -209,6 +209,10 @@
 # NOTE: It might be helpful to run dunst -print in a terminal in order
 # to find fitting options for rules.
 
+[play-sound]
+    summary = "*"
+    script = play-sound.sh
+
 #[espeak]
 #    summary = "*"
 #    script = dunst_espeak.sh

@@ -11,7 +11,7 @@ set $mod2 Mod4
 floating_modifier $mod1
 
 # Reload config / Restart i3
-bindsym $mod1+Shift+c reload
+#bindsym $mod1+Shift+c reload
 bindsym $mod1+Shift+r restart
 
 # Color variables
@@ -177,21 +177,26 @@ exec --no-startup-id exec synclient TouchpadOff=1
 bindsym $mod1+space exec --no-startup-id rofi -show run -font "Hack 10" -lines 6 -width 100 -location 2 -padding 0
 bindsym $mod1+Return exec --no-startup-id urxvt
 bindsym $mod1+P exec --no-startup-id firefox
+bindsym $mod1+A exec --no-startup-id anki
 bindsym $mod1+Shift+P exec --no-startup-id firefox --private-window
 bindsym $mod1+Shift+D exec --no-startup-id deepin-screenshot
+bindsym $mod1+C exec --no-startup-id $HOME/dotfiles/scripts/sentences.sh
+bindsym $mod1+Shift+C exec --no-startup-id urxvt -e vim + $HOME/sentences
 
 # Startup programs
+exec --no-startup-id dockd --daemon
 exec --no-startup-id xrdb -merge $HOME/.cache/wal/colors.xresources
 exec --no-startup-id sh $HOME/.fehbg
 exec --no-startup-id xautolock -time 30 -locker i3blurlock
+exec --no-startup-id fcitx-autostart
 exec --no-startup-id volumeicon
 exec --no-startup-id unclutter
 exec --no-startup-id nm-applet
-exec --no-startup-id uim-toolbar-gtk-systray
 exec --no-startup-id dunst
 exec --no-startup-id compton -b
 exec --no-startup-id sh $HOME/gakushuu/.entr.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id wal -i $HOME/pictures/wallpapers/.current.jpg
 
 # i3exit
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
